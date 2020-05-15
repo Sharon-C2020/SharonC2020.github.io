@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Your Lucky Color</title>
+</head>
+<body>
+<script> function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+function setRandomColor() {
+  $("#colorpad").css("background-color", getRandomColor());
+}
+</script>
+<h2> Click the button below to see your lucky color! </h2>
+<p> (Your color will appear in the box below!) </p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<div id="colorpad" style="width:300px;height:300px;background-color:#b8b8b8">
+
+</div>
+<button onclick="setRandomColor()">Your Lucky Color</button>
+
+<h2> Click the link below to find your lucky number! </h2>
+<br>
+<a href="index.html">Your Lucky Number!</a>
+
+</body>
+</html>
